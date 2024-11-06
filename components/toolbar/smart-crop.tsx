@@ -69,6 +69,7 @@ export default function SmartCrop() {
 		}
 	}
 
+
 	return (
 		<Popover>
 			<PopoverTrigger disabled={!activeLayer?.url} asChild>

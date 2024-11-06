@@ -105,7 +105,7 @@ export default function GenerativeFill() {
 		<Popover>
 			<PopoverTrigger disabled={!activeLayer?.url} asChild>
 				<Button variant='outline' className='p-8'>
-					<span className='flex gap-1 items-center justify-center flex-col text-xs font-medium'>
+					<span className='flex gap-1 items-center justify-center flex-col text-xs font-medium'>q
 						Generative Fill <Crop size={20} />
 					</span>
 				</Button>
