@@ -6,7 +6,7 @@ import { persist } from 'zustand/middleware'
 const createZustandContext = <TInitial, TStore extends StoreApi<any>>(
 	getStore: (initial: TInitial) => TStore
 ) => {
-	const Context = React.createContext(null as any as TStore)
+	const Context = React.createContext(null as unknown as TStore)
 
 	const Provider = (props: {
 		children?: React.ReactNode
@@ -18,7 +18,7 @@ const createZustandContext = <TInitial, TStore extends StoreApi<any>>(
 	}
 
 	return {
-		useContext: () => React.useContext(Context),
+		useContext: (): TStore => React.useContext(Context),
 		Context,
 		Provider,
 	}
