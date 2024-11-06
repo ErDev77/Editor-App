@@ -3,7 +3,6 @@
 import { useImageStore } from '@/lib/image-store' 
 import { Button } from '@/components/ui/button'
 import { recolorImage } from '@/server/recolor' 
-import { useAction } from 'next-safe-action/hooks'
 import { Badge } from '../ui/badge'
 import {
 	Popover,
@@ -14,7 +13,6 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { cn } from '@/lib/utils'
 // import { motion, AnimatePresence } from 'framer-motion'
-import { useMemo } from 'react'
 import { Paintbrush } from 'lucide-react'
 import { useLayerStore } from '@/lib/layer-store'
 
@@ -27,7 +25,7 @@ export default function AIRecolor() {
 	const setGenerating = useImageStore((state) => state.setGenerating)
 	const activeLayer = useLayerStore((state) => state.activeLayer)
 	const addLayer = useLayerStore((state) => state.addLayer)
-	const layers = useLayerStore((state) => state.layers)
+	// const layers = useLayerStore((state) => state.layers)
 	const generating = useImageStore((state) => state.generating)
 	const setActiveLayer = useLayerStore((state) => state.setActiveLayer)
 

@@ -4,11 +4,10 @@ import { useImageStore } from '@/lib/image-store'
 import { useLayerStore } from '@/lib/layer-store'
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover'
 import { Button } from '../ui/button'
-import { Crop, Eraser, Image } from 'lucide-react'
+import { Crop } from 'lucide-react'
 import { Label } from '../ui/label'
 import { Input } from '../ui/input'
 import { useMemo, useState } from 'react'
-import { bgRemoval } from '@/server/bg-remove'
 import { genFill } from '@/server/gen-fill'
 
 export default function GenerativeFill() {
@@ -44,7 +43,7 @@ export default function GenerativeFill() {
                     transform: "translateX(-50%)",
                } 
               return (
-                { isVisible } && (
+                 isVisible  && (
                     <div 
                     className='absolute bg-secondary text-primary px-2 py-1 rounded-md text-xs font-bold'
                     style={position}

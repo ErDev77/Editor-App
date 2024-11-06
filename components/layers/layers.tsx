@@ -10,7 +10,6 @@ import LayerImage from "./layer-image";
 import LayerInfo from "./layer-info";
 import { useMemo } from "react";
 import Image from "next/image";
-import { Arrow } from "@radix-ui/react-dropdown-menu";
 
 export default function Layers() {
     const layers = useLayerStore((state) => state.layers)

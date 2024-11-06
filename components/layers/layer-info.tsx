@@ -1,15 +1,12 @@
 'use client';
 
 import { Button } from '../ui/button';
-import { Ellipsis, EllipsisIcon, Trash, Trash2 } from 'lucide-react';
+import {  EllipsisIcon,  Trash2 } from 'lucide-react';
 import { Layer, useLayerStore } from '@/lib/layer-store';
 
 import {
 	Dialog,
 	DialogContent,
-	DialogDescription,
-	DialogHeader,
-	DialogTitle,
 	DialogTrigger,
 } from '@/components/ui/dialog'
 

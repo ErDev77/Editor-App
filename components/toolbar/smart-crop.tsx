@@ -1,15 +1,12 @@
-import React, { useMemo, useState } from 'react'
+import React, {  useState } from 'react'
 import { useImageStore } from '@/lib/image-store' 
 import { Button } from '@/components/ui/button'
-import { genFill } from '@/server/gen-fill'
 import {
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
 } from '@/components/ui/popover'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Crop, RefreshCcw, ScanFace, Square } from 'lucide-react'
+import { Crop, Square } from 'lucide-react'
 import { useLayerStore } from '@/lib/layer-store'
 import { genCrop } from '@/server/gen-crop'
  import { toast } from 'sonner'
@@ -21,7 +18,6 @@ import {
 	CardTitle,
 } from '../ui/card'
 import TikTok from '../icons/tiktok' 
-import Image from 'next/image'
 import Youtube from '../icons/youtube'
 import { cn } from '@/lib/utils'
 
@@ -29,7 +25,7 @@ export default function SmartCrop() {
 	const setGenerating = useImageStore(state => state.setGenerating)
 	const activeLayer = useLayerStore(state => state.activeLayer)
 	const addLayer = useLayerStore(state => state.addLayer)
-	const layers = useLayerStore(state => state.layers)
+	// const layers = useLayerStore(state => state.layers)
 	const [height, setHeight] = useState(0)
 	const [width, setWidth] = useState(0)
 	const generating = useImageStore(state => state.generating)

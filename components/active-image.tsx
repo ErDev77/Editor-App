@@ -2,9 +2,7 @@ import { useImageStore } from "@/lib/image-store";
 import { Layer, useLayerStore } from "@/lib/layer-store";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { render } from "react-dom";
 import ImageComparison from "./layers/image-comparison";
-import { useState } from "react";
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
 export default function ActiveImage() {

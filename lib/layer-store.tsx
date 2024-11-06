@@ -1,7 +1,7 @@
 import { createStore } from 'zustand/vanilla'
 import { StoreApi, useStore } from 'zustand'
 import React from 'react'
-import { persist, createJSONStorage } from 'zustand/middleware'
+import { persist } from 'zustand/middleware'
 
 const createZustandContext = <TInitial, TStore extends StoreApi<any>>(
 	getStore: (initial: TInitial) => TStore
